@@ -59,16 +59,16 @@ void PwmController::breatheTick() {
     if (!breatheOn_) return;
         
 
-    if (currentPercent_ >= 100.0f) {
+    if (currentPercent_ >= 100) {
         breathingUp_ = false;
-    } else if (currentPercent_ <= 0.0f) {
+    } else if (currentPercent_ == 0) {
         breathingUp_ = true;
     }
 
     if (breathingUp_) {
-        increaseByPercent(1.0f);
+        increaseByPercent(10);
     } else {
-        decreaseByPercent(1.0f);
+        decreaseByPercent(10);
     }
 }
 

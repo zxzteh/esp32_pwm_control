@@ -44,7 +44,7 @@ void ledTask(void *pv) {
     (void)pv;
     while(1) {
         pwmController.breatheTick();
-        vTaskDelay(pdMS_TO_TICKS(10));
+        vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
 
